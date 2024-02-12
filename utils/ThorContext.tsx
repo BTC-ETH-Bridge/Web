@@ -1,12 +1,8 @@
 import React, { createContext, useContext, useState, } from 'react';
 import { assetAmount, assetFromStringEx, assetToBase } from '@xchainjs/xchain-util'
-import {
-  CryptoAmount,
-  QuoteSwapParams,
-  ThorchainQuery,
-  TxDetails,
-  SwapEstimate,
-} from '@xchainjs/xchain-thorchain-query'
+
+//@ts-ignore
+import { CryptoAmount,QuoteSwapParams, ThorchainQuery, TxDetails, SwapEstimate,} from '@xchainjs/xchain-thorchain-query'
 import { FeeOption } from '@xchainjs/xchain-client'
 
 const useValue =  () => {
