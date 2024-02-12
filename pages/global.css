@@ -1,0 +1,152 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply leading-normal m-0 bg-whitesmoke ;
+}
+
+*,
+::before,
+::after {
+  @apply border-0;
+}
+
+/* Simplifying Modal and Overlay Styles */
+div#__next > div:first-child > style:first-child + div > div:first-child > div:first-child + div + div > div:first-child + div > div:first-child::after {
+  display: none
+}
+
+div#__next > div:first-child > style:first-child + div > div:first-child > div:first-child + div + div > div:first-child + div > div:first-child + button + div::after {
+  display: none
+}
+
+/* Simplifying Other Styles */
+.children-max > div {
+  @apply flex flex-col items-center justify-center w-full;
+}
+
+
+.children-max > div > button {
+  @apply flex flex-col items-center justify-center w-full;
+}
+
+
+.account_wrapper {
+  @apply   w-full;
+}
+
+
+.connect {
+  @apply  bg-orange-300 h-10 w-full  rounded-md;
+  font-size:medium;
+  font-weight: 500;
+  color: white; 
+}
+
+.connect:hover,.connect:active,.connect:focus {
+  scale: 1.02;
+}
+
+
+.account {
+  @apply bg-white  rounded-md  drop-shadow-lg w-full h-12 flex flex-row justify-around items-center;
+}
+
+.iconContainer {
+  @apply relative inline-block w-7 h-7;
+}
+
+.checkIcon {
+  @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white z-10;
+}
+
+.grayFilter {
+  @apply grayscale;
+}
+
+.menu_open {
+  @apply bg-white drop-shadow-lg border rounded-md flex flex-col justify-around items-center gap-1;
+}
+/*csslint  */
+.menu_open button{
+  background-color: white
+}
+
+.menu_close {
+  @apply hidden;
+}
+
+
+.modal {
+  @apply fixed top-1/2 left-1/2 z-50 bg-white border rounded-md p-4 transform -translate-x-1/2 -translate-y-1/2;
+  width:35vh;
+  height: 35vh; /* Adjust as per requirement */
+  max-width: 35vh;
+
+}
+
+@media (min-width: 768px) {
+  .modal {
+    width: 50%; /* Adjust for larger screens */
+  }
+}
+
+.overlay {
+  @apply fixed inset-0 bg-black bg-opacity-40 z-40;
+}
+  
+
+  .modalContainer{
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+
+
+    }
+    .modalCard {
+      width: 100%;
+
+
+      }
+
+      .modalButton {
+     
+        padding-top: 0.5rem ;
+        padding-left: 0.5rem;
+        padding-bottom: 0.5rem;
+        cursor: pointer;
+        height: 100%;
+        width: 100%;
+        min-width: none;
+        max-width: 100%;
+        border: none;
+        border-radius: 5px;
+        background-color: inherit;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size:medium;
+        font-weight: 500;
+        color: black;
+        text-decoration: none;
+
+        }
+
+        .modalLogo{
+          margin-right: 1rem;
+        }
+    
+  
+    
+    .modalLink:hover,.modalLink:active,.modalLink:focus {
+    background-color: rgb(235, 236, 236);
+    }
+    .modalButton:hover,.modalButton:active,.modalButton:focus {
+      background-color: rgb(235, 236, 236);
+      }
